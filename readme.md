@@ -9,8 +9,11 @@ docker-compose up -d
 
 ### База данных 
 host: mysql
+
 database: sitemanager
+
 username: bitrix
+
 pass: 123456
 
 ### Запуск тестов
