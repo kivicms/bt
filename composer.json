@@ -1,0 +1,19 @@
+{
+    "name": "kivicms/bt",
+    "description": "test for nirtix",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vitaliy Ivanov",
+            "email": "vivanov@studiofact.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "dev-master",
+        "codeception/module-asserts": "^1.0.0",
+        "codeception/module-webdriver": "dev-master"
+    }
+}

@@ -1,0 +1,35 @@
+version: '3'
+services:
+  selenium:
+    image: selenium/standalone-chrome
+    ports:
+      - "4444:4444"
+  web:
+    image: "akopkesheshyan/bitrix24:latest"
+    ports:
+      - "80:80"
+    cap_add:
+      - SYS_ADMIN 
+    security_opt:
+      - seccomp:unconfined
+    privileged: true
+    volumes:
+      - ./:/home/bitrix/www
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mariadb
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=Zc4e72xs --execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 20s
+      retries: 10
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Zc4e72xs
+      MYSQL_DATABASE: sitemanager
+      MYSQL_USER: bitrix
+      MYSQL_PASSWORD: Zc4e72xs
+    command: ['--character-set-server=utf8', '--collation-server=utf8_unicode_ci', '--skip-character-set-client-handshake', '--sql-mode=']
