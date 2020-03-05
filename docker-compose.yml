@@ -21,14 +21,14 @@ services:
   mysql:
     image: mariadb
     healthcheck:
-      test: "/usr/bin/mysql --user=root --password=Zc4e72xs --execute \"SHOW DATABASES;\""
+      test: "/usr/bin/mysql --user=root --password=123456 --execute \"SHOW DATABASES;\""
       interval: 2s
       timeout: 20s
       retries: 10
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: Zc4e72xs
+      MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: sitemanager
       MYSQL_USER: bitrix
       MYSQL_PASSWORD: Zc4e72xs

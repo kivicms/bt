@@ -1,24 +1,24 @@
 # Created by .ignore support plugin (hsz.mobi)
-# /bitrix
-# /company
-# /contacts
-# /include
-# /login
-# /news
-# /products
-# /search
-# /services
-# /upload
-# /vendor
-# .access.php
-# .bottom.menu.php
-# .htaccess
-# .section.php
-# .top.menu.php
-# 404.php
+/bitrix
+/company
+/contacts
+/include
+/login
+/news
+/products
+/search
+/services
+/upload
+/vendor
+.access.php
+.bottom.menu.php
+.htaccess
+.section.php
+.top.menu.php
+404.php
 composer.lock
-# index.php
-# urlrewrite.php
-# web.config
+index.php
+urlrewrite.php
+web.config
 
 .idea
